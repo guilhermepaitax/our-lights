@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MensagemController">
+   <children>
+      <Label fx:id="lbtit" layoutX="46.0" layoutY="14.0" text="Bem vindo ao Our Lights">
+         <font>
+            <Font name="Gulim" size="26.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.4722222222222222" centerY="0.48095238095238096" radius="0.6162790697674418">
+               <stops>
+                  <Stop color="#752f90" />
+                  <Stop color="#e15b5b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lbtexto" contentDisplay="CENTER" layoutX="26.0" layoutY="80.0" prefHeight="293.0" prefWidth="341.0" text="O Our Lights é um sistema para calcular o gasto de luz de sua residencia e ajudar te ajuadar a manter suas contas em dia para que voce possa se organizar e planejar seus gastos..." textFill="#ff6900" wrapText="true">
+         <font>
+            <Font name="MS Gothic" size="22.0" />
+         </font></Label>
+      <Button fx:id="btok" layoutX="177.0" layoutY="378.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="65.0" text="Ok">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

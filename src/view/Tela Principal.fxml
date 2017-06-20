@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TelaPrincipalController">
+   <children>
+      <ImageView fx:id="ivfundo" fitHeight="430.0" fitWidth="762.0" layoutX="-30.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/fundo2.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="Mbmenu" layoutY="2.0" prefHeight="25.0" prefWidth="729.0">
+        <menus>
+          <Menu fx:id="Mnperfil" mnemonicParsing="false" text="Perfil">
+            <items>
+              <MenuItem fx:id="Mivisuperfi" mnemonicParsing="false" text="Visualizar Perfil" />
+            </items>
+          </Menu>
+          <Menu fx:id="Mngrafico" mnemonicParsing="false" text="Grafico">
+            <items>
+              <MenuItem fx:id="Mivigrafico" mnemonicParsing="false" text="Grafico de Consumo" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="lbtitulo" layoutX="312.0" layoutY="37.0" text="Our Lights" textFill="#dd7429">
+         <font>
+            <Font name="Gulim" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btconta" layoutX="78.0" layoutY="236.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" text="Conta" />
+      <Button fx:id="bteconomia" layoutX="551.0" layoutY="236.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" text="Economia" />
+      <Button fx:id="btanalise" layoutX="316.0" layoutY="236.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="98.0" text="Analise" />
+      <Label fx:id="lbconta" layoutX="60.0" layoutY="279.0" prefHeight="115.0" prefWidth="134.0" text="Cadastre suas contas de energia para poder organizar seus gastos e economizar" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="MS PGothic" size="15.0" />
+         </font></Label>
+      <Label fx:id="lbanalise" layoutX="316.0" layoutY="287.0" prefHeight="100.0" prefWidth="106.0" text="Aqui voce pode calcular o quanto voce gastou no mes e quanto economizou comparado aos outros meses" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="MS PGothic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbeconomia" layoutX="551.0" layoutY="290.0" prefHeight="93.0" prefWidth="98.0" text="Aqui voce pode visualizar formas de economizar e ver dicas para um consumo sustentavel" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="MS PGothic" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="ivconta" fitHeight="143.0" fitWidth="164.0" layoutX="56.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/conta.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivanalise" fitHeight="143.0" fitWidth="164.0" layoutX="294.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/analise.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iveconomia" fitHeight="143.0" fitWidth="164.0" layoutX="528.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/economia.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
