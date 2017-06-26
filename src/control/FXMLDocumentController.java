@@ -6,16 +6,28 @@
 package control;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
+import model.JDBC.ConnectionFactory;
+import model.JDBC.UsuarioDAO;
 import model.Usuario;
 import view.manage.Cadastrarabre;
 import view.manage.Mensagemabre;
@@ -48,8 +60,56 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private ImageView Ivsimbolo;
     
+    
+    
+    
+    public void logar(){
+        
+        try {
+            UsuarioDAO dao = new UsuarioDAO();
+            ObservableList<Usuario> users = dao.selectUsuario();
+            for (int i = 0; i < users.size(); i++) {
+                if (tflogin.getText().equals(users.get(i).getLogin())) {
+                    if (pfsenha.getText().equals(users.get(i).getSenha())) {
+                        
+                        String nome,login,senha,nascimento, foto;
+                        boolean adm, usua;
+                        int id_usuario;
+                        nome = users.get(i).getNome();
+                        foto = users.get(i).getFoto();
+                        senha = users.get(i).getSenha();
+                        nascimento = users.get(i).getNascimento();
+                        login = users.get(i).getLogin();
+                        id_usuario = users.get(i).getId_usuario();
+                        adm = users.get(i).isAdm();
+                        usua = users.get(i).isUsua();
+                        Usuario usuario = new Usuario(nome, login, senha, nascimento, foto, id_usuario, adm, usua);
+                        
+                        ProgramaTm p1 = new ProgramaTm();
+                        Mensagemabre m1 = new Mensagemabre();
+                        m1.abreTela();
+                        p1.fecharTela();
+                        
+                        i = users.size();
+                    }
+                } else if (i + 1 == users.size()) {
+                    Alert erro = new Alert(Alert.AlertType.ERROR);
+                    erro.setHeaderText("Login ou senha incorretos!!!");
+                    erro.show();
+                }
+            }
+            
+        } catch (Exception ee) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ee);
+        }
+    }
+        
+    
+    
+    
+    
     public void SetImagem(){       
-    String caminho = "E:\\imagens\\lara.png";
+    String caminho = "imagens\\lara.png";
     Image image = new Image("file:///" + caminho);
     Ivsimbolo.setImage(image);
  
@@ -66,29 +126,8 @@ public class FXMLDocumentController implements Initializable {
     
     public void acaoBotao(){
         btentrar.setOnMouseClicked(value->{
-            Usuario u1 = new Usuario();
-          if(tflogin.getText().equals("admin") && pfsenha.getText().equals("admin")){  
-                Mensagemabre m1 = new Mensagemabre();
-                m1.abreTela();
-            
-                ProgramaTm p1 = new ProgramaTm();
-                p1.fecharTela();
-                
-          }
-          
-          if(tflogin.getText().equals(u1.getLogin()) && pfsenha.getText().equals(u1.getSenha())){
-              
-              Mensagemabre m1 = new Mensagemabre();
-                m1.abreTela();
-            
-                ProgramaTm p1 = new ProgramaTm();
-                p1.fecharTela();
-              
-          }
-          
-                else{
-              Lbmensag.setText("Login ou senha incorretos!");
-          }
+
+            logar();
                           
             
         });
@@ -101,6 +140,7 @@ public class FXMLDocumentController implements Initializable {
         acaoDoBotao();
         acaoBotao();
         SetImagem();
+        logar();
     }    
     
 }

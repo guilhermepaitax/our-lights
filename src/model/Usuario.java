@@ -1,12 +1,29 @@
 
 package model;
 
-
 public class Usuario {
     
+      
+    private int id_usuario;
+
+    public Usuario(String nome, String login, String senha, String nascimento, String foto, int id_usuario, boolean adm, boolean usua) {
+        
+    }
+
+    public Usuario() {
+        
+    }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
     private String nome,login,senha;
-    private boolean tipo1, tipo2;
-    private String data, foto;
+    private boolean adm, usua;
+    private String nascimento, foto;
 
     public String getFoto() {
         return foto;
@@ -16,12 +33,12 @@ public class Usuario {
         this.foto = foto;
     }
 
-    public String getData() {
-        return data;
+    public String getNascimento() {
+        return nascimento;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setNascimento(String nascimento) {
+        this.nascimento = nascimento;
     }
 
     
@@ -30,12 +47,12 @@ public class Usuario {
         return nome;
     }
 
-    public boolean isTipo2() {
-        return tipo2;
+    public boolean isUsua() {
+        return usua;
     }
 
-    public void setTipo2(boolean tipo2) {
-        this.tipo2 = tipo2;
+    public void setUsua(boolean usua) {
+        this.usua = usua;
     }
 
     public void setNome(String nome) {
@@ -58,12 +75,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public boolean isTipo1() {
-        return tipo1;
+    public boolean isAdm() {
+        return adm;
     }
 
-    public void setTipo(boolean tipo) {
-        this.tipo1 = tipo;
+    public void setAdm(boolean tipo) {
+        this.adm = tipo;
     }
     
 }

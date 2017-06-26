@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.JDBC.UsuarioDAO;
 import model.Usuario;
 import model.gerenciaImagem;
 
@@ -30,6 +31,9 @@ public class CadastrarController implements Initializable {
     
     @FXML
     private TextField tfnome;
+    
+    @FXML
+    private TextField tfid;
     
     @FXML
     private TextField tfloginc;
@@ -71,33 +75,42 @@ public class CadastrarController implements Initializable {
     }
     public void acao(){
         btcadast.setOnMouseClicked(value->{
-                 
-        Usuario u1 = new Usuario();
-        u1.setTipo(cbadm.isSelected());
-        u1.setTipo2(cbusua.isSelected());
-        u1.setNome(tfnome.getText());
-        u1.setLogin(tfloginc.getText());
-        u1.setSenha(tfsenhac.getText());
-        u1.setData(tfdata.getText());
-        u1.setFoto(camin);
+            Valida();     
+            
+        Usuario usuario = new Usuario();
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuario.setId_usuario(Integer.valueOf(tfid.getText()));
+        usuario.setNome(tfnome.getText());
+        usuario.setLogin(tfloginc.getText());
+        usuario.setSenha(tfsenhac.getText());
+        usuario.setAdm(cbadm.isSelected());
+        usuario.setUsua(cbusua.isSelected());
+        usuario.setNascimento(tfdata.getText());
+        usuario.setFoto(camin);
+        usuarioDAO.addUsuario(usuario);
+            
         
-            //System.out.println("Login:"+u1.getLogin());
-            //System.out.println("Senha:"+u1.getSenha());
-            
-            
-        if(u1.getLogin().equals("") || u1.getSenha().equals("") || u1.getNome().equals("") || u1.getData().equals("") || u1.isTipo1()== true && u1.isTipo2()== true){
+        
+    });
+    }
+    
+    public void Valida(){
+        String nome = tfnome.getText(),senha = tfsenhac.getText(),login = tfloginc.getText(),data = tfdata.getText();
+        int id = Integer.valueOf(tfid.getText());
+        boolean adm = cbadm.isSelected(), usu = cbusua.isSelected();
+        
+        if( login.equals("") || senha.equals("") ||  nome.equals("") || data.equals("") || adm== true && usu== true || adm == false && usu == false){
             lbmns.setText("Erro: preencher todos os campos!");
-            if(u1.isTipo1()== true && u1.isTipo2()== true){
+            if(adm == true && usu == true || adm == false && usu == false){
             lbmns.setText("Erro: Escolher apenas uma opção!");
             
         }
+            
         }
-        
                 else{
             lbmns.setText("Cadastro com sucesso!");
         }
-        
-    });
+  
     }
     
     
@@ -106,6 +119,7 @@ public class CadastrarController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         AcaoDosBotoes();
         acao();
+    
     }    
     
 }

@@ -10,7 +10,7 @@ public class gerenciaImagem {
     
     public String getNovaImagem(){
             
-            String caminhoDaImagem = "C:\\Users\\Public\\Pictures\\Sample Pictures\\Coala.jpeg";
+            String caminhoDaImagem = "E:\\imagens\\perfil.png";
             
             FileChooser telaEscolhoImagem = new FileChooser();
             telaEscolhoImagem.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imagens", "*.jpg", "*.jpeg", "*.png"));

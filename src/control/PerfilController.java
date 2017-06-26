@@ -13,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.JDBC.UsuarioDAO;
 import model.Usuario;
 import model.gerenciaImagem;
 
@@ -44,29 +45,33 @@ public class PerfilController implements Initializable {
     @FXML
     private ImageView ivfoto;
     
-    @FXML
-    private ImageView ivlampada;
     
     public void SetImagem(){       
-    String caminho = "E:\\imagens\\perfil.png";
+    String caminho = "imagens\\perfil.png";
     Image image = new Image("file:///" + caminho);
-    ivlampada.setImage(image);
+    ivfoto.setImage(image);
  
     }
     
     public void colocaInfo(){
-        Usuario u1 = new Usuario();
-        tfnome.setText(u1.getNome());
-        tflogin.setText(u1.getLogin());
-        tfdata.setText(u1.getData());
+        UsuarioDAO u1 = new UsuarioDAO();
+        Usuario u2 = new Usuario(); 
+        u1.selectUsuario();
         
-        gerenciaImagem gerencia = new gerenciaImagem();
+        tfnome.setText(u2.getNome());
+        tflogin.setText(u2.getLogin());
+        tfdata.setText(u2.getNascimento());
+        if(u2.getFoto() != ""){
             
-            
-            Image image = new Image("file:///" + u1.getFoto());
+             String caminho = u2.getFoto();
+            Image image = new Image("file:///" + caminho);
             ivfoto.setImage(image);
-    
+ 
     }
+            
+}
+        
+    
     
     
     @Override

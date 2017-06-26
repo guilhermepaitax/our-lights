@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ContasController">
+   <children>
+      <TabPane fx:id="Tpmenu" prefHeight="525.0" prefWidth="806.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cadastrar Conta">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label fx:id="Lbcadastrodeconta" layoutX="15.0" layoutY="35.0" prefHeight="28.0" prefWidth="228.0" text="Cadastro da conta">
+                           <font>
+                              <Font name="MS Gothic" size="26.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfvalor" layoutX="15.0" layoutY="151.0" prefHeight="25.0" prefWidth="204.0" promptText="Valor R$:" />
+                        <TextField fx:id="tfkwh" layoutX="16.0" layoutY="203.0" prefHeight="25.0" prefWidth="202.0" promptText="kWh Consumidos:" />
+                        <MenuButton fx:id="mbmes" layoutX="16.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="Mês">
+                          <items>
+                            <MenuItem fx:id="mijaneiro" mnemonicParsing="false" text="Janeiro" />
+                            <MenuItem fx:id="mifevereiro" mnemonicParsing="false" text="Fevereiro" />
+                              <MenuItem fx:id="mimarco" mnemonicParsing="false" text="Março" />
+                              <MenuItem fx:id="miabril" mnemonicParsing="false" text="Abril" />
+                              <MenuItem fx:id="mimaio" mnemonicParsing="false" text="Maio" />
+                              <MenuItem fx:id="mijunho" mnemonicParsing="false" text="Junho" />
+                              <MenuItem fx:id="mijulho" mnemonicParsing="false" text="Julho" />
+                              <MenuItem fx:id="miagosto" mnemonicParsing="false" text="Agosto" />
+                              <MenuItem fx:id="misetembro" mnemonicParsing="false" text="Setembro" />
+                              <MenuItem fx:id="mioutubro" mnemonicParsing="false" text="Outubro" />
+                              <MenuItem fx:id="minovembro" mnemonicParsing="false" text="Novembro" />
+                              <MenuItem fx:id="midezembro" mnemonicParsing="false" text="Dezembro" />
+                          </items>
+                        </MenuButton>
+                        <ImageView fx:id="ivconta" fitHeight="254.0" fitWidth="542.0" layoutX="250.0" layoutY="49.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/Copel.JPG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btcadastrar" layoutX="73.0" layoutY="339.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="94.0" text="Cadastrar" />
+                        <Label fx:id="Lbcampo1" layoutX="250.0" layoutY="295.0" prefHeight="40.0" prefWidth="539.0" text="Campo 1 – Dados do consumidor Apresenta nome, endereço e documentos do titular da fatura." wrapText="true">
+                           <font>
+                              <Font name="MS Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lbcampo2" layoutX="250.0" layoutY="335.0" prefHeight="40.0" prefWidth="539.0" text="Campo 2 – Dados principais Identifica a unidade consumidora, utilizada nas solicitações junto a Copel, vencimento e valor e mês de referência." wrapText="true">
+                           <font>
+                              <Font name="MS Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lbcampo3" layoutX="250.0" layoutY="375.0" prefHeight="40.0" prefWidth="539.0" text="Campo 3 – Tipo de conta Modalidade tarifária e Data de Emissão da Fatura." wrapText="true">
+                           <font>
+                              <Font name="MS Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lbcampo4" layoutX="250.0" layoutY="421.0" prefHeight="63.0" prefWidth="539.0" text="Campo 4 – Informações Técnicas Nesse campo, estão contidas informações de leitura do medidor, o qual está especificado por um número e tipo.Estão apresentados consumo médio, total faturado, classe de consumo, e data prevista para a próxima leitura." wrapText="true">
+                           <font>
+                              <Font name="MS Gothic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lbmensagem" layoutX="28.0" layoutY="383.0" prefHeight="38.0" prefWidth="183.0" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lbajuda" layoutX="499.0" layoutY="14.0" prefHeight="38.0" prefWidth="183.0" text="Ajuda:" textAlignment="CENTER">
+                           <font>
+                              <Font name="MS Gothic" size="26.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfid" layoutX="16.0" layoutY="106.0" prefHeight="25.0" prefWidth="204.0" promptText="Id:" />
+                        <DatePicker fx:id="dpvencimento" layoutX="17.0" layoutY="295.0" prefHeight="25.0" prefWidth="203.0" promptText="Vencimento" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Simular Conta">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="ivbandeira" fitHeight="309.0" fitWidth="422.0" layoutX="351.0" layoutY="156.0" opacity="0.94" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/bandeira.JPG" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="tfkwhsimu" layoutX="45.0" layoutY="173.0" prefHeight="25.0" prefWidth="209.0" promptText="kWh Consumidos:" />
+                        <Button fx:id="btverde" layoutX="100.0" layoutY="276.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #77e464;" text="Verde" />
+                        <Button fx:id="btamarelo" layoutX="100.0" layoutY="328.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #fffc5e;" text="Amarela" />
+                        <Button fx:id="btvermelho" layoutX="100.0" layoutY="383.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="98.0" style="-fx-background-color: #f84848;" text="Vermelha" />
+                        <Label fx:id="lbsimbolodin" layoutX="73.0" layoutY="443.0" prefHeight="31.0" prefWidth="19.0" text="R$:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbvalorsimu" layoutX="99.0" layoutY="445.0" prefHeight="28.0" prefWidth="100.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbtitulo" layoutX="66.0" layoutY="117.0" text="Simular Conta:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbescolha" layoutX="66.0" layoutY="215.0" prefHeight="43.0" prefWidth="210.0" text="  Escolha a bandeira referente as condições de geração de energia." wrapText="true" />
+                        <Label fx:id="lbexplica" layoutX="351.0" layoutY="14.0" prefHeight="100.0" prefWidth="373.0" text="* O simulador de conta é apenas uma simulação de um valor de uma conta. Levando em conta no calculo a bandeira tarifaria e o total de kilowatts consumidos." wrapText="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

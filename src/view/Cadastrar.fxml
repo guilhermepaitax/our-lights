@@ -24,7 +24,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TextField fx:id="tfnome" layoutX="48.0" layoutY="116.0" prefHeight="21.0" prefWidth="204.0" promptText="Nome" />
+      <TextField fx:id="tfnome" layoutX="48.0" layoutY="127.0" prefHeight="21.0" prefWidth="204.0" promptText="Nome" />
       <TextField fx:id="tfloginc" layoutX="48.0" layoutY="178.0" prefHeight="21.0" prefWidth="204.0" promptText="Login" />
       <TextField fx:id="tfsenhac" layoutX="48.0" layoutY="234.0" prefHeight="21.0" prefWidth="204.0" promptText="Senha" />
       <Button fx:id="btcadast" layoutX="237.0" layoutY="385.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="89.0" text="Cadastrar" />
@@ -34,5 +34,6 @@
       <CheckBox fx:id="cbusua" layoutX="48.0" layoutY="360.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="112.0" text="Usuario" />
       <Label fx:id="lbmns" layoutX="174.0" layoutY="449.0" prefHeight="34.0" prefWidth="216.0" textAlignment="CENTER" textFill="RED" />
       <TextField fx:id="tfdata" layoutX="48.0" layoutY="280.0" prefHeight="21.0" prefWidth="204.0" promptText="Data de Nasc: dd/mm/aaaa" />
+      <TextField fx:id="tfid" layoutX="48.0" layoutY="72.0" prefHeight="21.0" prefWidth="204.0" promptText="Id" />
    </children>
 </AnchorPane>

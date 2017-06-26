@@ -15,17 +15,15 @@
             <Font name="Gulim" size="18.0" />
          </font>
       </Label>
-      <ImageView fx:id="ivfoto" fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ivfoto" fitHeight="150.0" fitWidth="200.0" layoutX="99.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/perfil.png" />
+         </image></ImageView>
       <TextField fx:id="tfnome" editable="false" layoutX="88.0" layoutY="242.0" prefHeight="25.0" prefWidth="173.0" />
       <TextField fx:id="tflogin" editable="false" layoutX="89.0" layoutY="300.0" prefHeight="25.0" prefWidth="173.0" />
       <TextField fx:id="tfdata" editable="false" layoutX="89.0" layoutY="359.0" prefHeight="25.0" prefWidth="173.0" />
       <Label fx:id="lbnome" layoutX="89.0" layoutY="218.0" text="Nome:" />
       <Label fx:id="lblogin" layoutX="89.0" layoutY="275.0" text="Login:" />
       <Label fx:id="lbdata" layoutX="91.0" layoutY="334.0" text="Data de Nasc:" />
-      <ImageView fx:id="ivlampada" fitHeight="67.0" fitWidth="94.0" layoutX="141.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../imagens/perfil.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

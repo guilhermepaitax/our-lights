@@ -41,12 +41,12 @@
          <font>
             <Font name="MS PGothic" size="15.0" />
          </font></Label>
-      <Label fx:id="lbanalise" layoutX="316.0" layoutY="287.0" prefHeight="100.0" prefWidth="106.0" text="Aqui voce pode calcular o quanto voce gastou no mes e quanto economizou comparado aos outros meses" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lbanalise" layoutX="310.0" layoutY="287.0" prefHeight="133.0" prefWidth="112.0" text="Aqui voce pode visualizar o quanto voce gastou no mes e quanto economizou comparado aos outros meses" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="MS PGothic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lbeconomia" layoutX="551.0" layoutY="290.0" prefHeight="93.0" prefWidth="98.0" text="Aqui voce pode visualizar formas de economizar e ver dicas para um consumo sustentavel" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lbeconomia" layoutX="551.0" layoutY="283.0" prefHeight="108.0" prefWidth="106.0" text="Aqui voce pode visualizar formas de economizar e ver dicas para um consumo sustentavel" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="MS PGothic" size="15.0" />
          </font>

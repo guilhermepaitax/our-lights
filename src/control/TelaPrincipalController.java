@@ -12,6 +12,8 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import view.manage.Analiseabre;
+import view.manage.Contasabre;
 import view.manage.Perfilabre;
 
 
@@ -66,32 +68,55 @@ public class TelaPrincipalController implements Initializable {
     private MenuItem Mivigrafico;
     
     public void SetImagem(){       
-    String caminho = "E:\\imagens\\economia.png";
+    String caminho = "imagens\\economia.png";
     Image image = new Image("file:///" + caminho);
     iveconomia.setImage(image);
  
     }
     
     public void SetImagem2(){       
-    String caminho = "E:\\imagens\\analise.png";
+    String caminho = "imagens\\analise.png";
     Image image = new Image("file:///" + caminho);
     ivanalise.setImage(image);
  
     }
     
     public void SetImagem3(){       
-    String caminho = "E:\\imagens\\conta.png";
+    String caminho = "imagens\\conta.png";
     Image image = new Image("file:///" + caminho);
     ivconta.setImage(image);
  
     }
     
     public void SetImagem4(){       
-    String caminho = "E:\\imagens\\fundo2.jpg";
+    String caminho = "imagens\\fundo2.jpg";
     Image image = new Image("file:///" + caminho);
     ivfundo.setImage(image);
  
     }
+    
+    public void acaoContas(){
+        
+        btconta.setOnMouseClicked(value->{
+            Contasabre c1 = new Contasabre();
+            c1.abreTela();
+            
+        });
+        
+        
+    }
+    
+    public void acaoAnalise(){
+        btanalise.setOnMouseClicked(value->{
+            Analiseabre a1 = new Analiseabre();
+            
+            a1.abreTela();
+            
+        });
+        
+        
+    }
+    
     
     public void acaoDoPerfil(){
         Mivisuperfi.setOnAction(value->{
@@ -112,6 +137,8 @@ public class TelaPrincipalController implements Initializable {
         SetImagem3();
         SetImagem4();
         acaoDoPerfil();
+        acaoContas();
+        acaoAnalise();
     }    
     
 }
