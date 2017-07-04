@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="411.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.EditarUsuarioController">
+   <children>
+      <ImageView fx:id="ivfundo" fitHeight="482.0" fitWidth="543.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../imagens/3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivfundo2" fitHeight="423.0" fitWidth="471.0" layoutX="40.0" layoutY="9.0" opacity="0.74" pickOnBounds="true">
+         <image>
+            <Image url="@../../../imagens/Ativo%202.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivtitulo" fitHeight="82.0" fitWidth="185.0" layoutX="199.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/editar%20titulo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbid" layoutX="68.0" layoutY="114.0" text="Id:" textFill="WHITE" />
+      <TextField fx:id="tfnome" layoutX="68.0" layoutY="180.0" opacity="0.73" prefHeight="25.0" prefWidth="204.0" promptText="Nome" />
+      <TextField fx:id="tflogin" layoutX="68.0" layoutY="229.0" opacity="0.73" prefHeight="25.0" prefWidth="204.0" promptText="Login" />
+      <TextField fx:id="tfsenha" layoutX="68.0" layoutY="276.0" opacity="0.73" prefHeight="25.0" prefWidth="204.0" promptText="Senha" />
+      <TextField fx:id="tfnascimento" layoutX="68.0" layoutY="324.0" opacity="0.73" prefHeight="25.0" prefWidth="204.0" promptText="Data de Nascimento" />
+      <ImageView fx:id="ivfoto" fitHeight="129.0" fitWidth="170.0" layoutX="319.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btfoto" layoutX="360.0" layoutY="276.0" mnemonicParsing="false" opacity="0.81" style="-fx-background-color: #ffffff;" text="Carregar Foto" />
+      <Button fx:id="bteditar" layoutX="179.0" layoutY="393.0" mnemonicParsing="false" opacity="0.81" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" text="Editar" />
+      <Button fx:id="btcancelar" layoutX="284.0" layoutY="393.0" mnemonicParsing="false" opacity="0.81" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" text="Cancelar" />
+      <Label fx:id="lbmostraid" layoutX="94.0" layoutY="114.0" prefHeight="17.0" prefWidth="48.0" textFill="WHITE" />
+      <Label fx:id="lbnome" layoutX="67.0" layoutY="157.0" text="Nome:" textFill="WHITE" />
+      <Label fx:id="lblogin" layoutX="67.0" layoutY="212.0" text="Login:" textFill="WHITE" />
+      <Label fx:id="lbsenha" layoutX="69.0" layoutY="259.0" text="Senha:" textFill="WHITE" />
+      <Label fx:id="lbnascimento" layoutX="69.0" layoutY="307.0" text="Data de nascimento:" textFill="WHITE" />
+   </children>
+</AnchorPane>

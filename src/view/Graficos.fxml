@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="522.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.GraficosController">
+   <children>
+      <TabPane fx:id="tpmenu" prefHeight="522.0" prefWidth="753.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tbarras" text="Barras">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="ivfundo" fitHeight="509.0" fitWidth="1095.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/techandall_wallpaper_6.jpg" />
+                           </image>
+                        </ImageView>
+                        <BarChart fx:id="bcbarra" layoutX="119.0" layoutY="14.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="cagrafico" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tpizza" text="Pizza">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="695.0">
+                     <children>
+                        <ImageView fx:id="ivfundo2" fitHeight="509.0" fitWidth="1095.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/techandall_wallpaper_6.jpg" />
+                           </image>
+                        </ImageView>
+                        <PieChart fx:id="pbpizza" layoutX="94.0" layoutY="14.0" prefHeight="401.0" prefWidth="579.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

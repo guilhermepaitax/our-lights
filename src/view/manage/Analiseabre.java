@@ -1,6 +1,7 @@
 
 package view.manage;
 
+import control.AnaliseController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static javafx.application.Application.launch;
@@ -8,12 +9,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Usuario;
 
 
 public class Analiseabre {
     
     
     private static Stage stage;
+
+    public Analiseabre(Usuario log) {
+        AnaliseController.setUsu(log);
+    }
     
     public void abreTela() {
         try {

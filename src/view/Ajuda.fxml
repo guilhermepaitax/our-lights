@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.AjudaController">
+   <children>
+      <ImageView fx:id="ivconta" fitHeight="282.0" fitWidth="626.0" layoutX="41.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/Copel.JPG" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbcampo1" layoutX="41.0" layoutY="313.0" prefHeight="43.0" prefWidth="680.0" text="Campo 1 – Dados do consumidorApresenta nome, endereço e documentos do titular da fatura." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbcampo2" layoutX="41.0" layoutY="356.0" prefHeight="43.0" prefWidth="680.0" text="Campo 2 – Dados principaisIdentifica a unidade consumidora, utilizada nas solicitações junto a Copel, vencimento e valor e mês de referência." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbcampo3" layoutX="41.0" layoutY="404.0" prefHeight="43.0" prefWidth="680.0" text="Campo 3 – Tipo de contaModalidade tarifária e Data de Emissão da Fatura." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbcampo4" layoutX="41.0" layoutY="447.0" prefHeight="43.0" prefWidth="680.0" text="Campo 4 – Informações TécnicasNesse campo, estão contidas informações de leitura do medidor, o qual está especificado por um número e tipo." wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbtitulo" layoutX="255.0" layoutY="14.0" text="Ajuda na leitura da fatura" textFill="#ffbc2d">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

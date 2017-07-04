@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CadastrarController">
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CadastrarController">
    <children>
       <Label fx:id="lbcadas" layoutX="205.0" layoutY="14.0" text="Cadastrar">
          <font>
@@ -27,13 +27,12 @@
       <TextField fx:id="tfnome" layoutX="48.0" layoutY="127.0" prefHeight="21.0" prefWidth="204.0" promptText="Nome" />
       <TextField fx:id="tfloginc" layoutX="48.0" layoutY="178.0" prefHeight="21.0" prefWidth="204.0" promptText="Login" />
       <TextField fx:id="tfsenhac" layoutX="48.0" layoutY="234.0" prefHeight="21.0" prefWidth="204.0" promptText="Senha" />
-      <Button fx:id="btcadast" layoutX="237.0" layoutY="385.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="89.0" text="Cadastrar" />
-      <ImageView fx:id="ivfoto" fitHeight="150.0" fitWidth="200.0" layoutX="326.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btimagen" layoutX="382.0" layoutY="275.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="89.0" text="Carregar Foto" />
+      <TextField fx:id="tfnascimento" layoutX="48.0" layoutY="279.0" prefHeight="25.0" prefWidth="204.0" promptText="Nascimento: dd/mm/aaaa" />
       <CheckBox fx:id="cbadm" layoutX="48.0" layoutY="330.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="112.0" text="Administrador" />
       <CheckBox fx:id="cbusua" layoutX="48.0" layoutY="360.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="112.0" text="Usuario" />
+      <Button fx:id="btimagen" layoutX="382.0" layoutY="275.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="89.0" text="Carregar Foto" />
+      <Button fx:id="btcadast" layoutX="237.0" layoutY="385.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="89.0" text="Cadastrar" />
+      <ImageView fx:id="ivfoto" fitHeight="150.0" fitWidth="200.0" layoutX="326.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="lbmns" layoutX="174.0" layoutY="449.0" prefHeight="34.0" prefWidth="216.0" textAlignment="CENTER" textFill="RED" />
-      <TextField fx:id="tfdata" layoutX="48.0" layoutY="280.0" prefHeight="21.0" prefWidth="204.0" promptText="Data de Nasc: dd/mm/aaaa" />
-      <TextField fx:id="tfid" layoutX="48.0" layoutY="72.0" prefHeight="21.0" prefWidth="204.0" promptText="Id" />
    </children>
 </AnchorPane>

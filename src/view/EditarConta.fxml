@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="486.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="control.EditarContaController">
+   <children>
+      <ImageView fx:id="ivfundo" fitHeight="493.0" fitWidth="606.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivfundo2" fitHeight="455.0" fitWidth="434.0" layoutX="33.0" layoutY="24.0" opacity="0.62" pickOnBounds="true">
+         <image>
+            <Image url="@../../../imagens/Ativo%202.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivtitulo" fitHeight="105.0" fitWidth="184.0" layoutX="159.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/editar%20conta.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfvalor" layoutX="149.0" layoutY="154.0" opacity="0.58" prefHeight="25.0" prefWidth="203.0" promptText="Valor" />
+      <TextField fx:id="tfconsumidos" layoutX="149.0" layoutY="214.0" opacity="0.59" prefHeight="25.0" prefWidth="203.0" promptText="kWh Consumidos" />
+      <DatePicker fx:id="dpdata" layoutX="149.0" layoutY="277.0" opacity="0.65" prefHeight="25.0" prefWidth="203.0" promptText="Data da Fatura" />
+      <DatePicker fx:id="dpvencimento" layoutX="149.0" layoutY="340.0" opacity="0.65" prefHeight="25.0" prefWidth="203.0" promptText="Vencimento da Fatura" />
+      <Button fx:id="bteditar" layoutX="149.0" layoutY="423.0" mnemonicParsing="false" opacity="0.8" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #ffffff;" text="Editar" />
+      <Button fx:id="btcancelar" layoutX="277.0" layoutY="423.0" mnemonicParsing="false" opacity="0.82" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #ffffff;" text="Cancelar" />
+      <Label fx:id="lbvalor" layoutX="149.0" layoutY="137.0" text="Valor:" textFill="WHITE" />
+      <Label fx:id="lbkwh" layoutX="149.0" layoutY="197.0" text="kWh Consumidos:" textFill="WHITE" />
+      <Label fx:id="lbdata" layoutX="149.0" layoutY="260.0" text="Data da Fatura:" textFill="WHITE" />
+      <Label fx:id="lbvencimento" layoutX="149.0" layoutY="323.0" text="Vencimento da Fatura:" textFill="WHITE" />
+   </children>
+</AnchorPane>

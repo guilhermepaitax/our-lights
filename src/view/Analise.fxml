@@ -12,7 +12,7 @@
    <children>
       <ImageView fx:id="ivfundo" fitHeight="539.0" fitWidth="921.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../imagens/cool%20orange%20and%20black%20backgrounds.jpg" />
+            <Image url="@../imagens/blue-blur-26927-2880x1800.jpg" />
          </image>
       </ImageView>
       <Label fx:id="lbtitulo" layoutX="84.0" layoutY="14.0" text="Analise suas contas:" textFill="WHITE">
@@ -29,5 +29,31 @@
             <TableColumn fx:id="tcvencimento" prefWidth="161.0" text="Vencimento" />
         </columns>
       </TableView>
+      <Button fx:id="btatualizar" layoutX="84.0" layoutY="465.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" text="Atualizar" />
+      <ImageView fx:id="ivatualizar" fitHeight="50.0" fitWidth="54.0" layoutX="24.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/available-updates-xxl.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ivexcluir" fitHeight="50.0" fitWidth="54.0" layoutX="185.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/delete-256.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btexcluir" layoutX="252.0" layoutY="464.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" text="Excluir" />
+      <ImageView fx:id="iveditar" fitHeight="50.0" fitWidth="54.0" layoutX="359.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/edit-property-xxl.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="bteditar" layoutX="428.0" layoutY="464.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" text="Editar" />
+      <ImageView fx:id="ivpdf" fitHeight="50.0" fitWidth="54.0" layoutX="537.0" layoutY="455.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../imagens/document-xxl.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btpdf" layoutX="598.0" layoutY="464.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" text="Criar PDF" />
+      <DatePicker fx:id="dppesquisa" layoutX="445.0" layoutY="8.0" prefHeight="25.0" prefWidth="153.0" promptText="Pesquisa" />
+      <Button fx:id="btpesquisa" layoutX="598.0" layoutY="4.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="87.0" text="Pesquisar" />
    </children>
 </AnchorPane>

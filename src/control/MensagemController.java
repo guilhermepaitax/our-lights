@@ -25,9 +25,7 @@ public class MensagemController implements Initializable {
      public void acaoDoBotao(){
          
          btok.setOnMouseClicked(value->{
-             telaprincipalabre t1 = new telaprincipalabre();
-             t1.abreTela();
-             
+                       
              Mensagemabre m1 = new Mensagemabre();
              m1.fecharTela();
              

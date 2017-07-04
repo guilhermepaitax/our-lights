@@ -1,6 +1,7 @@
 
 package view.manage;
 
+import control.ContasController;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static javafx.application.Application.launch;
@@ -8,11 +9,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Usuario;
 
 
 public class Contasabre {
     
     private static Stage stage;
+
+    public Contasabre(Usuario log) {
+        ContasController.setUsu(log);
+    }
     
     public void abreTela() {
         try {

@@ -1,15 +1,24 @@
 
 package model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 
 public class Conta {
     
     private Double valor;
-    private String mes;
-    private Date vencimento;
-    private int kwh,id;
+    private LocalDate mes;
+    private LocalDate vencimento;
+    private int kwh,id, id_user;
+
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
 
     public int getId() {
         return id;
@@ -27,21 +36,23 @@ public class Conta {
         this.valor = valor;
     }
 
-    public String getMes() {
+    public LocalDate getMes() {
         return mes;
     }
 
-    public void setMes(String mes) {
+    public void setMes(LocalDate mes) {
         this.mes = mes;
     }
 
-    public Date getVencimento() {
+    public LocalDate getVencimento() {
         return vencimento;
     }
 
-    public void setVencimento(Date vencimento) {
+    public void setVencimento(LocalDate vencimento) {
         this.vencimento = vencimento;
     }
+
+    
 
     public int getKwh() {
         return kwh;

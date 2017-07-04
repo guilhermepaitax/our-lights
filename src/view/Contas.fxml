@@ -16,69 +16,38 @@
         <tabs>
           <Tab text="Cadastrar Conta">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="496.0" prefWidth="784.0">
                      <children>
-                        <Label fx:id="Lbcadastrodeconta" layoutX="15.0" layoutY="35.0" prefHeight="28.0" prefWidth="228.0" text="Cadastro da conta">
+                        <ImageView fx:id="ivback" fitHeight="562.0" fitWidth="945.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/techandall_wallpaper_6.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Lbcadastrodeconta" layoutX="291.0" layoutY="80.0" prefHeight="28.0" prefWidth="228.0" text="Cadastro da conta">
                            <font>
                               <Font name="MS Gothic" size="26.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="tfvalor" layoutX="15.0" layoutY="151.0" prefHeight="25.0" prefWidth="204.0" promptText="Valor R$:" />
-                        <TextField fx:id="tfkwh" layoutX="16.0" layoutY="203.0" prefHeight="25.0" prefWidth="202.0" promptText="kWh Consumidos:" />
-                        <MenuButton fx:id="mbmes" layoutX="16.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="Mês">
-                          <items>
-                            <MenuItem fx:id="mijaneiro" mnemonicParsing="false" text="Janeiro" />
-                            <MenuItem fx:id="mifevereiro" mnemonicParsing="false" text="Fevereiro" />
-                              <MenuItem fx:id="mimarco" mnemonicParsing="false" text="Março" />
-                              <MenuItem fx:id="miabril" mnemonicParsing="false" text="Abril" />
-                              <MenuItem fx:id="mimaio" mnemonicParsing="false" text="Maio" />
-                              <MenuItem fx:id="mijunho" mnemonicParsing="false" text="Junho" />
-                              <MenuItem fx:id="mijulho" mnemonicParsing="false" text="Julho" />
-                              <MenuItem fx:id="miagosto" mnemonicParsing="false" text="Agosto" />
-                              <MenuItem fx:id="misetembro" mnemonicParsing="false" text="Setembro" />
-                              <MenuItem fx:id="mioutubro" mnemonicParsing="false" text="Outubro" />
-                              <MenuItem fx:id="minovembro" mnemonicParsing="false" text="Novembro" />
-                              <MenuItem fx:id="midezembro" mnemonicParsing="false" text="Dezembro" />
-                          </items>
-                        </MenuButton>
-                        <ImageView fx:id="ivconta" fitHeight="254.0" fitWidth="542.0" layoutX="250.0" layoutY="49.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
+                        <TextField fx:id="tfvalor" layoutX="301.0" layoutY="151.0" prefHeight="25.0" prefWidth="204.0" promptText="Valor R$:" />
+                        <TextField fx:id="tfkwh" layoutX="302.0" layoutY="202.0" prefHeight="25.0" prefWidth="202.0" promptText="kWh Consumidos:" />
+                        <DatePicker fx:id="dpdatafatura" layoutX="302.0" layoutY="248.0" prefHeight="25.0" prefWidth="203.0" promptText="Data da Fatura" />
+                        <DatePicker fx:id="dpvencimento" layoutX="302.0" layoutY="293.0" prefHeight="25.0" prefWidth="203.0" promptText="Vencimento" />
+                        <ImageView fx:id="ivbarra" fitHeight="191.0" fitWidth="364.0" layoutX="233.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../imagens/Copel.JPG" />
+                              <Image url="@../../../imagens/linha.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btcadastrar" layoutX="73.0" layoutY="339.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="94.0" text="Cadastrar" />
-                        <Label fx:id="Lbcampo1" layoutX="250.0" layoutY="295.0" prefHeight="40.0" prefWidth="539.0" text="Campo 1 – Dados do consumidor Apresenta nome, endereço e documentos do titular da fatura." wrapText="true">
-                           <font>
-                              <Font name="MS Gothic" size="14.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="Lbcampo2" layoutX="250.0" layoutY="335.0" prefHeight="40.0" prefWidth="539.0" text="Campo 2 – Dados principais Identifica a unidade consumidora, utilizada nas solicitações junto a Copel, vencimento e valor e mês de referência." wrapText="true">
-                           <font>
-                              <Font name="MS Gothic" size="14.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="Lbcampo3" layoutX="250.0" layoutY="375.0" prefHeight="40.0" prefWidth="539.0" text="Campo 3 – Tipo de conta Modalidade tarifária e Data de Emissão da Fatura." wrapText="true">
-                           <font>
-                              <Font name="MS Gothic" size="14.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="Lbcampo4" layoutX="250.0" layoutY="421.0" prefHeight="63.0" prefWidth="539.0" text="Campo 4 – Informações Técnicas Nesse campo, estão contidas informações de leitura do medidor, o qual está especificado por um número e tipo.Estão apresentados consumo médio, total faturado, classe de consumo, e data prevista para a próxima leitura." wrapText="true">
-                           <font>
-                              <Font name="MS Gothic" size="14.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="Lbmensagem" layoutX="28.0" layoutY="383.0" prefHeight="38.0" prefWidth="183.0" textAlignment="CENTER">
+                        <Label fx:id="Lbmensagem" layoutX="303.0" layoutY="411.0" prefHeight="38.0" prefWidth="204.0" textAlignment="CENTER">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="Lbajuda" layoutX="499.0" layoutY="14.0" prefHeight="38.0" prefWidth="183.0" text="Ajuda:" textAlignment="CENTER">
-                           <font>
-                              <Font name="MS Gothic" size="26.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="tfid" layoutX="16.0" layoutY="106.0" prefHeight="25.0" prefWidth="204.0" promptText="Id:" />
-                        <DatePicker fx:id="dpvencimento" layoutX="17.0" layoutY="295.0" prefHeight="25.0" prefWidth="203.0" promptText="Vencimento" />
+                        <ImageView fx:id="ivlinha" fitHeight="150.0" fitWidth="723.0" layoutX="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../imagens/divisoria-1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btcadastrar" layoutX="356.0" layoutY="357.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="94.0" text="Cadastrar" />
                      </children>
                   </AnchorPane>
             </content>
@@ -117,6 +86,8 @@
                               <Font size="13.0" />
                            </font>
                         </Label>
+                        <Label fx:id="lbunitario" layoutX="45.0" layoutY="54.0" prefHeight="21.0" prefWidth="197.0" text="*Valor Unitario Simulado = 0,60" />
+                        <Label fx:id="lbiluminacao" layoutX="45.0" layoutY="75.0" prefHeight="21.0" prefWidth="252.0" text="*Valor de Iluminação Publica Simulado = 15,00" />
                      </children>
                   </AnchorPane>
             </content>

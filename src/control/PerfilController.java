@@ -7,8 +7,13 @@ package control;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -16,6 +21,8 @@ import javafx.scene.image.ImageView;
 import model.JDBC.UsuarioDAO;
 import model.Usuario;
 import model.gerenciaImagem;
+import view.manage.Perfilabre;
+import view.manage.editarusuarioabre;
 
 
 public class PerfilController implements Initializable {
@@ -45,39 +52,60 @@ public class PerfilController implements Initializable {
     @FXML
     private ImageView ivfoto;
     
+    @FXML
+    private Button bteditar;
     
-    public void SetImagem(){       
-    String caminho = "imagens\\perfil.png";
-    Image image = new Image("file:///" + caminho);
-    ivfoto.setImage(image);
- 
+    private static Usuario perf;
+
+    public static Usuario getPerf() {
+        return perf;
     }
-    
-    public void colocaInfo(){
-        UsuarioDAO u1 = new UsuarioDAO();
-        Usuario u2 = new Usuario(); 
-        u1.selectUsuario();
-        
-        tfnome.setText(u2.getNome());
-        tflogin.setText(u2.getLogin());
-        tfdata.setText(u2.getNascimento());
-        if(u2.getFoto() != ""){
-            
-             String caminho = u2.getFoto();
-            Image image = new Image("file:///" + caminho);
-            ivfoto.setImage(image);
- 
+
+    public static void setPerf(Usuario aperf) {
+        perf = aperf;
     }
+
+    
+    public void editar(){
+        bteditar.setOnAction(value->{
+            editarusuarioabre e1 = new editarusuarioabre(perf);
+            Perfilabre p1 = new Perfilabre();
+            p1.fecharTela();
+            e1.abreTela();
+        });
+        
+        
+    }
+
+    public void colocainfo(){
+        
+       
+        
+        tfnome.setText(perf.getNome());
+        tflogin.setText(perf.getLogin());
+        tfdata.setText(perf.getNascimento());
+       
+            String caminho = perf.getFoto();
+        Image image = new Image("file:///" + caminho);
+        ivfoto.setImage(image); 
             
-}
+        }
+        
         
     
-    
-    
+        
+
+       
+
+
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        SetImagem();
-        colocaInfo();
-    }    
+    public void initialize(URL location, ResourceBundle resources) {
+        colocainfo();
+        editar();
+       
+    }
+    }
     
-}
+    
+    
+

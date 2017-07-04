@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="766.0" style="-fx-background-color: #276bea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ListaUsuarioController">
+   <children>
+      <TableView fx:id="tvtabela" layoutY="74.0" prefHeight="431.0" prefWidth="772.0">
+        <columns>
+          <TableColumn fx:id="tcid" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tcnome" prefWidth="205.0" text="Nome" />
+            <TableColumn fx:id="tclogin" prefWidth="186.0" text="Login" />
+            <TableColumn fx:id="tcnasc" prefWidth="169.0" text="Data Nascimento" />
+            <TableColumn fx:id="tcadm" prefWidth="136.0" text="Adm" />
+        </columns>
+      </TableView>
+      <Button fx:id="btatualizar" layoutX="31.0" layoutY="23.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="Atualizar" />
+      <Button fx:id="btexcluir" layoutX="138.0" layoutY="23.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="Excluir" />
+      <Button fx:id="bteditar" layoutX="244.0" layoutY="23.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="Editar" />
+      <TextField fx:id="tfpesquisa" layoutX="474.0" layoutY="26.0" prefHeight="25.0" prefWidth="194.0" promptText="Nome" />
+      <Button fx:id="btpesquisa" layoutX="680.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ffffff;" text="Pesquisar" />
+      <Button fx:id="btpdf" layoutX="343.0" layoutY="23.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="PDF" />
+   </children>
+</AnchorPane>
