@@ -34,9 +34,9 @@ public class ContaDAO {
             stmt.execute();
             
             
-            System.out.println("Foi");
+           // System.out.println("Foi");
         } catch (Exception e) {
-            System.out.println("Nao foi");
+          //  System.out.println("Nao foi");
         }
               
     }
@@ -65,13 +65,13 @@ public class ContaDAO {
                 c1.setVencimento(ven.toLocalDate());
                 c1.setValor(rs.getDouble("valor"));
                 conta.add(c1);
-                System.out.println("BOM");
+              //  System.out.println("BOM");
             }
             stmt.execute();
             stmt.close();
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("ruim");
+          //  System.out.println("ruim");
         }
         
     
@@ -113,9 +113,9 @@ public class ContaDAO {
             stmt.execute();
             
             
-            System.out.println("Foi");
+          //  System.out.println("Foi");
         } catch (Exception e) {
-            System.out.println("Nao foi");
+          //  System.out.println("Nao foi");
         }
               
     }

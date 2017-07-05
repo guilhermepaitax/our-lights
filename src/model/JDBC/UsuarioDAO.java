@@ -39,9 +39,9 @@ public class UsuarioDAO {
             stmt.close();
             con.getConnection().close();
             
-            System.out.println("Foi");
+            //System.out.println("Foi");
         } catch (Exception e) {
-            System.out.println("Nao foi");
+           // System.out.println("Nao foi");
         }
               
     }
@@ -69,14 +69,14 @@ public class UsuarioDAO {
                 usuario.setFoto(rs.getString("foto"));
                 usuario.setNascimento(rs.getString("nascimento"));
                 usuarios.add(usuario);
-                System.out.println("BOM");
+               // System.out.println("BOM");
             }
             
             con.getConnection().close();
             rs.close();
         } catch (SQLException ex) {
             Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("ruim");
+           // System.out.println("ruim");
         }
         
     
@@ -118,9 +118,9 @@ public class UsuarioDAO {
             stmt.close();
             con.getConnection().close();
             
-            System.out.println("Foi");
+          //  System.out.println("Foi");
         } catch (Exception e) {
-            System.out.println("Nao foi");
+           // System.out.println("Nao foi");
         }
               
     }

@@ -24,7 +24,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label fx:id="lbtexto" contentDisplay="CENTER" layoutX="26.0" layoutY="80.0" prefHeight="293.0" prefWidth="341.0" text="O Our Lights é um sistema para calcular o gasto de luz de sua residencia e ajudar te ajuadar a manter suas contas em dia para que voce possa se organizar e planejar seus gastos..." textFill="#ff6900" wrapText="true">
+      <Label fx:id="lbtexto" contentDisplay="CENTER" layoutX="26.0" layoutY="80.0" prefHeight="293.0" prefWidth="341.0" text="O Our Lights é um sistema para calcular o gasto de luz de sua residencia e te ajuadar a manter suas contas em dia para que voce possa se organizar e planejar seus gastos..." textFill="#ff6900" wrapText="true">
          <font>
             <Font name="MS Gothic" size="22.0" />
          </font></Label>
